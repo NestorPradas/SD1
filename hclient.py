@@ -11,5 +11,7 @@ if (sys.argv[1] == "worker"):
     if (sys.argv[2] == "list"):
         print(proxy.list_worker())
 if (sys.argv[1] == "job"):
-    print(proxy.jobRun(sys.argv[2], sys.argv[3]))
-    
+    if (len(sys.argv)==5):
+        print(proxy.jobRun2(sys.argv[2], sys.argv[3], sys.argv[4]))
+    else:
+        print(proxy.jobRun(sys.argv[2], sys.argv[3]))
